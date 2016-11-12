@@ -7,4 +7,11 @@ Rails.application.routes.draw do
   resource :home, only: [:show]
 
   root to: "home#show"
+
+  get '/spots/new', to: 'spots#new'
+  post '/spots/new', to: 'spots#new'
+
+  post '/spots/create', to: 'spots#create'
+
+  get '/spots', to: 'spots#show'
 end

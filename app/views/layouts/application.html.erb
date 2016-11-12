@@ -16,7 +16,10 @@
     <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
   <% end %>
 </div>
-<%= yield %>
+<main role="main">
+   <%= render 'layouts/messages' %>
+</main>
 
+<%= yield %>
 </body>
 </html>
