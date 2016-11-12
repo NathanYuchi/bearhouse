@@ -8,7 +8,7 @@ class SpotsController < ApplicationController
   end
 
   def new
-    if @current_user == nil
+    if current_user == nil
       flash[:error] = "Log in to continue"
       redirect_to root_path
     else
@@ -22,7 +22,8 @@ class SpotsController < ApplicationController
     @spot.beds = params[:spot][:beds]
     @spot.baths = params[:spot][:baths]
     @spot.description = params[:spot][:description]
-    @spot.owner = :user_id
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    @spot.owner = @current_user.uid
 
     if @spot.save
       redirect_to spots_path(:id => @spot.id)
