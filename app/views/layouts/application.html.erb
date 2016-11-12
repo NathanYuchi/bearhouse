@@ -2,13 +2,13 @@
 <html>
 <head>
   <title>Bear House</title>
-  <%= stylesheet_link_tag    'default', media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "**defaults**", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "bootstrap" %>
+  <%= stylesheet_link_tag    "default", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "default", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-
 </head>
-<body>
-<div>
+<body style="background: url('../images/A_E_S_T_H_E_T_I_C.png'); background-size: 120%; background-repeat: no-repeat;">
+<div style="text-align: right;">
   <% if current_user %>
     Signed in as <strong><%= current_user.name %></strong>!
     <%= link_to "Sign out", signout_path, id: "sign_out" %>
