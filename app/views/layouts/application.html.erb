@@ -2,12 +2,16 @@
 <html>
 <head>
   <title>Bear House</title>
-  <%= stylesheet_link_tag "bootstrap" %>
+  <%= stylesheet_link_tag "application" %>
   <%= stylesheet_link_tag    "default", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "default", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body style="background: url('../images/A_E_S_T_H_E_T_I_C.png'); background-size: 120%; background-repeat: no-repeat;">
+<body style="background: url('../images/A_E_S_T_H_E_T_I_C.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
 <div style="text-align: right;">
   <% if current_user %>
     Signed in as <strong><%= current_user.name %></strong>!
@@ -17,7 +21,7 @@
   <% end %>
 </div>
 <main role="main">
-   <%= render 'layouts/messages' %>
+  <%= render partial: "layouts/flash_messages", flash: flash %>
 </main>
 
 <%= yield %>
