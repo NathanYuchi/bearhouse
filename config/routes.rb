@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   post '/spots/create', to: 'spots#create'
 
   get '/spots', to: 'spots#show'
+
+  post '/spots/search', to: 'spots#search'
 end

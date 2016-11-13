@@ -5,14 +5,23 @@
 <br>
 <div style="text-align: center;" class="container">
   <div class="row">
-    <div class="span12">
-      <%= button_to "Create new listing", "/spots/new" %>
-      <form method="get" action="/" class="form-inline">
+    <div name="search" class="span12">
 
-        <input class="span5" type="text" placeholder="Rooms">
-        <input class="span5" type="text" placeholder="Price">
-        <button type="submit" class="btn btn-primary">Search</button>
-      </form>
+      <%= simple_form_for Spot.new, :url => spots_new_path,
+        wrapper: :inline_form,
+        html: {class: 'form-inline'} do |f| %>
+        <%= f.button :submit, 'Create New Listing' %>
+      <% end %>
+
+      <%= simple_form_for Spot.new, :url => spots_search_path,
+        wrapper: :inline_form,
+        html: {class: 'form-inline'} do |f| %>
+        <%= f.input :beds, prompt: "Beds", :collection => ['Studio','1','2','3','4+'] %>
+        <%= f.input :price, prompt: "Price",
+        :collection => ['Less than $800', '$800 to $1000', '$1000-$1200', '$1200-$1500', 'More than $1500'] %>
+        <%= f.button :submit, 'Search' %>
+      <% end %>
+
     </div>
 
 

@@ -32,4 +32,11 @@ class SpotsController < ApplicationController
       redirect_to spots_new_path
     end
   end
+
+  def search
+    @spot = Spot.new
+    @spot.beds = params[:spot][:beds]
+    @spot.price = params[:spot][:price]
+  end
+
 end
