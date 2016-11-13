@@ -1,28 +1,11 @@
-== README
+README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+BearHouse
+Hack made by Nathan and Ari for CalHacks 3.0.
 
-Things you may want to cover:
+A web app which pulls listings from Facebook housing groups and allows them to be searched and filtered. This functionality is not offered natively in Facebook, which can make it difficult to find homes which fit one's needs.\
 
-* Ruby version
+Ruby on Rails
+HTML & CSS
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+ʕ´• ᴥ •`ʔ
