@@ -1,11 +1,13 @@
 README
 
 BearHouse
+
 Hack made by Nathan and Ari for CalHacks 3.0.
 
 A web app which pulls listings from Facebook housing groups and allows them to be searched and filtered. This functionality is not offered natively in Facebook, which can make it difficult to find homes which fit one's needs.\
 
 Ruby on Rails
+
 HTML & CSS
 
 ʕ´• ᴥ •`ʔ
